@@ -7,6 +7,7 @@ You can do all sorts of things in the terminal. But don't take my word for that.
 ## Exercise: Navigating with Terminal
 Here we will cover some basic terminal commands and learn how to explore the file system within the terminal
 
+
 1. Open up Terminal.app
 1. In terminal, type in the command `pwd` and hit `<Enter>`
 1. You should see the terminal print something like `/Users/<username>`
@@ -67,6 +68,7 @@ In this step by step, it will be really important for us down the line to let ou
 
 ## Exercise: Copying the project files from Github
 Now let's get out of the Terminal for just a moment.
+
 1. Open your browser, go to [github.com](http://github.com)
 2. Login with your account
 3. Go to the [repository for this workshop](https://github.com/edgarjcfn/dev_workshop)
