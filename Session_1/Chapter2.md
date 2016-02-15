@@ -55,7 +55,30 @@ So as you can see, the concepts between Fork and branch are very similar (give m
 One important thing to notice: branches are not just used by teams. It is very useful even when coding by yourself, to create a new branch for each of your new features and experiments. This way you can easily discard ongoing changes, without compromising the working version of your code.
 
 #### Exercise: Git branching
-2. Open the browser, go to your Fork of this project at http://github.com/(your-username)/dev_workshop
-1. Click the drop-down menu where it reads "master"
-2. Type the name `my-experiment` on the text box
-3. 
+2. Open the browser, go to your own fork of this project at http://github.com/(your-username)/dev_workshop
+1. Click the drop-down menu where it reads `master`
+2. Type the name `my-experiment` on the text box and hit `<enter>`
+3. You've just created a branch called `my-experiment`. It's essentially a copy of what was in `master`, but now changes made to the files won't show up in the master file
+4. Create a new file in the folder "Git Extensions" named `my-new-file.txt`
+5. Commit the creation of the new file with a message
+5. Now select the master branch again, and navigate to that folder
+6. You'll realize your newly created file is not there
+   - That is because the `my-experiment` branch was not merged to `master` yet
+7. Now proceed to the main view of the repository and click the "Compare & Pull Request" button
+8. Follow the instructions to merge the `my-experiment` branch into `master`
+
+
+### Pull, push and commit : Synchronizing with the repository
+At this moment, I hope there are no doubts about forking and branching because in my experience this next topic is where things tend to get a bit tricky to understand.
+Git works by creating a history of version on your local computer, and gives you absolute control of when you want to synchronize this information with the server (thus, sharing these changes with your team). It's a tricky concept to grasp because we are used to tools that do auto-updating with a server like Dropbox and Google Drive. Git is just different.
+
+Think about when you make changes to a document that is backed up with Google Drive. Each time you save the document, a new input in the history of that document is created. It states what was changed, who changed it and when. Later, anyone in the team can inspect these changes, and even download a previous version of the file if needed. But when you hit "save", the software _automatically_ uploads those changes to the server. You had no control in that.
+
+That approach can cause a lot of conflicts if the repository is holding many files, that are constantly changed by multiple people, and have lots of internal dependencies.  What git does is allow developers to bundle significant changes locally and then send them to the server when they want to. By saving this information locally, we can go back in history and undo changes even without communicating with the server.
+
+So here's the important concepts on that matter:
+
+#### Exercise: using `add` and `commit` to write to local history
+TBD
+#### Exericse: using `pull` and `push` to synchronize with server
+TBD
