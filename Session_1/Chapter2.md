@@ -51,3 +51,11 @@ To understand the basic differences between forking and branching, let's go back
 If they break something on their design, or their experiment fails, this doesn't stand in the way of the work of the other two colleagues. In the other hand if they are happy with the changes, they can decide to merge this changes together into a single blueprint, and you can end up with a blue-lighted, energy-efficient, standards-compatible microwave oven.
 
 So as you can see, the concepts between Fork and branch are very similar (give me a copy of something, so I can work on it without getting in your way), but the usages are very different. One is used to get your own copy of someone else's work ("Fork"), while the other is used so your team can work freely on multiple features of the same design ("Branch").
+
+One important thing to notice: branches are not just used by teams. It is very useful even when coding by yourself, to create a new branch for each of your new features and experiments. This way you can easily discard ongoing changes, without compromising the working version of your code.
+
+#### Exercise: Git branching
+2. Open the browser, go to your Fork of this project at http://github.com/(your-username)/dev_workshop
+1. Click the drop-down menu where it reads "master"
+2. Type the name `my-experiment` on the text box
+3. 
