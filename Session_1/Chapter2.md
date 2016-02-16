@@ -76,9 +76,40 @@ Think about when you make changes to a document that is backed up with Google Dr
 
 That approach can cause a lot of conflicts if the repository is holding many files, that are constantly changed by multiple people, and have lots of internal dependencies.  What git does is allow developers to bundle significant changes locally and then send them to the server when they want to. By saving this information locally, we can go back in history and undo changes even without communicating with the server.
 
-So here's the important concepts on that matter:
+In the following exercises we will present some important concepts on that matter. As an added challenge, all the file changes (creating files, adding text) should be done in the terminal, using the commands we learned on Chapter 1.
 
 #### Exercise: using `add` and `commit` to write to local history
-TBD
+1. Using the terminal, navigate to the folder `Project/Git Experiments` (remember the `cd` command?)
+2. Open the file `edit.me` using the Atom editor (Remember, you can do this via command-line as well, using the `atom` command)
+3. Marvel at the amazing content of the file
+4. Make some modifications to the file. Do whatever you like to the text. (Maybe you want to append some text to it, using `echo` and the `>>` redirect?)
+3. Now in the command line type `git status`
+4. You should see that the modifications appear in a list called `Changes not staged for commit`
+   - Changes not staged for commit are changes that are still not written to git history
+   - Because there's no historical data written yet, these changes are super easy to lose.
+   - A git "change" can be anything. In this case it's text modified inside a file, but it could also be a deleted file, for example.
+5. Use the command `git add edit.me`
+6. Nothing seems to happen
+6. Now try `git status` again, what changed?
+  - `edit.me` now shows up in a different list: `Changes to be commited`
+  - At this point you still haven't written to history, you're merely saying: "this file should be included, next time I write changes to history"
+1. Now it's time to actually write history (sounds epic, doesn't it?)
+2. Tell the terminal to `git commit -m "My first commit"`
+  - Note that you *always* have to provide a message to the commit
+  - Messages help use read the history and see what was changed
+3. Now if you try the `git status` once more, you'll see that there are no more changes to be commited.
+  - It might warn you though, that your changes are out of sync with the server
+  - The `commit` only writes to your *local* history: Github (the server) still has no idea of what you just did. It all happened on your computer and you can't share this change with your team just yet.
+7. Now use `rm delete.me` to remove this other file
+8. Now try to commit the deletion by replicating the steps 9 to 12.
+
 #### Exericse: using `pull` and `push` to synchronize with server
-TBD
+1. Now that you have at least 2 changes (the commits from last exercise), we should push them to the server. This is the safest thing you can do with your changes. Once they are on github, you can always recover to this state
+2. Since the changes are already commited. All you have to do now is `git push`
+3. Wait until it's completed
+4. Check your changes on the github project page.
+5. Since we're in the github project page, let's do some changes from the browser
+6. Go to the `Project/Git Experiments` folder
+7. Do some more changes to `edit.me` via the in-browser editor, and commit these changes.
+  - For the purpose of this exercise, we can pretend that these changes were done by a team mate, somewhere else in the world.
+8. Now back to terminal, use `git pull`. This will update your local changes with the changes done somewhere else.

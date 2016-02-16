@@ -20,19 +20,16 @@ This workshop is being structured to be presented in 4 different after-work sess
 ### 1st session
  - Getting familiar with the command line
  - How Git works
- - How a web application works
 
 ### 2nd session
- - How a mobile application works
- - Introduction to programming with Swift
+ - Introduction to programming with Swift Playgrounds
 
 ### 3rd session
- - How a web application works part II
- - More programming with Swift
+ - Building a mobile app with Swift and Xcode
 
 ### 4th session
  - Wrapping up our mobile app
- - Publishing our backend
+ - Building a simple backend with Node.js and Heroku
 
 ## Where to go from here?
 If you're just starting the workshop, open SETUP.md and follow the instructions there.
